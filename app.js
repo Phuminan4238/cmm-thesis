@@ -1,3 +1,4 @@
+/* Video Scrolling Script */
 const intro = document.querySelector(".intro");
 const video = intro.querySelector("video");
 const text = intro.querySelector("h1");
@@ -10,12 +11,12 @@ const controller = new ScrollMagic.Controller();
 
 //Scenes
 let scene = new ScrollMagic.Scene({
-        duration: 9000,
-        triggerElement: intro,
-        triggerHook: 0
-    })
-    .addIndicators()
-    .setPin(intro)
+    duration: 9000,
+    triggerElement: intro,
+    triggerHook: 0
+})
+
+.setPin(intro)
     .addTo(controller);
 
 //Text Animation
@@ -48,3 +49,4 @@ setInterval(() => {
 
     video.currentTime = delay;
 }, 33.3);
+/************************************************/
